@@ -1,8 +1,5 @@
 #pragma once
 
-#include <cassert>
-#include <iostream>
-
 template <typename T>
 bool chcekIfSorted(T* tab, int size)
 {

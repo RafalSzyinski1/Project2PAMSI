@@ -1,4 +1,6 @@
 #pragma once
+#include <cassert>
+#include <cstdio>
 
 #include "quicksort.hpp"
 #include "tests/sortTest.hpp"
@@ -9,7 +11,7 @@ void test1()
     int tab[] = {6, 5, 4, 3, 2, 1};
     quicksort(tab, 0, 5);
     assert(chcekIfSorted(tab, 6));
-    std::cout << "TEST1 GOOD" << std::endl;
+    printf("TEST1 GOOD\n");
 }
 
 // All zero test and one -1
@@ -18,7 +20,7 @@ void test2()
     int tab[] = {0, 0, 0, 0, 0, 0, -1};
     quicksort(tab, 0, 6);
     assert(chcekIfSorted(tab, 7));
-    std::cout << "TEST2 GOOD" << std::endl;
+    printf("TEST2 GOOD\n");
 }
 
 // All random
@@ -29,7 +31,7 @@ void test3()
         tab[i] = rand();
     quicksort(tab, 0, 9);
     assert(chcekIfSorted(tab, 10));
-    std::cout << "TEST3 GOOD" << std::endl;
+    printf("TEST3 GOOD\n");
 }
 
 // All random, Big, with also value < 0
@@ -41,7 +43,7 @@ void test4()
         tab[i] = rand() - (RAND_MAX / 2);
     quicksort(tab, 0, size - 1);
     assert(chcekIfSorted(tab, size));
-    std::cout << "TEST4 GOOD" << std::endl;
+    printf("TEST4 GOOD\n");
 }
 
 void testQuicksort()
