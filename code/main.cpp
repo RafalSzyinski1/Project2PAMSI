@@ -1,6 +1,7 @@
-#include "benchmark/bucketsortBenchmark.hpp"
+#include "tests/mergesortTest.hpp"
+#include "benchmark/quicksortBenchmark.hpp"
 int main()
 {
-    bucketsortBenchmark();
+    quicksortBenchmark();
     return 0;
 }
