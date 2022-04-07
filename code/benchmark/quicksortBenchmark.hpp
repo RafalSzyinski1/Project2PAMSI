@@ -22,9 +22,10 @@ void bench2()
 
 void bench3()
 {
-    auto data = getData(FILTRED_DATA_SIZE);
-    long long time = benchmark([&](){quicksort(data, 0, FILTRED_DATA_SIZE - 1);});
-    printf("Benchmark 3: Data Size=AllData, Time=%lldms\n", time);
+    long long data_size = FILTRED_DATA_SIZE;
+    auto data = getData(data_size);
+    long long time = benchmark([&](){quicksort(data, 0, data_size - 1);});
+    printf("Benchmark 3: Data Size=%lld, Time=%lldms\n", data_size, time);
 }
 
 void quicksortBenchmark()

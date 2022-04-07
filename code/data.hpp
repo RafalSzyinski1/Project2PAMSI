@@ -50,6 +50,14 @@ Film* getData(int size)
     return films;
 }
 
+void printFilms(Film* tab, int size)
+{
+    for (int i = 0; i < size; ++i)
+    {
+        printf("%d %s %f\n", tab[i].Lp, tab[i].name, tab[i].rate);
+    }
+}
+
 float meanRate(Film* tab, int size)
 {
     double sum;
