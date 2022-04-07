@@ -4,6 +4,9 @@
 #include "bucketsort.hpp"
 #include "data.hpp"
 
+namespace Bucketsort
+{
+
 void bench1()
 {
     long long data_size = 10000;
@@ -28,9 +31,11 @@ void bench3()
     printf("Benchmark 3: Data Size=%lld, Time=%lldms\n", data_size, time);
 }
 
-void bucketsortBenchmark()
+void bench()
 {
     bench1();
     bench2();
     bench3();
+}
+
 }

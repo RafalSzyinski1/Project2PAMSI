@@ -2,6 +2,6 @@
 #include "benchmark/quicksortBenchmark.hpp"
 int main()
 {
-    quicksortBenchmark();
+    Quicksort::bench();
     return 0;
 }

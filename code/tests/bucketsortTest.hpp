@@ -5,6 +5,9 @@
 #include "bucketsort.hpp"
 #include "tests/sortTest.hpp"
 
+namespace Bucketsort
+{
+
 // Test for small data size
 void test1()
 {
@@ -35,9 +38,11 @@ void test3()
     printf("TEST3 GOOD\n");
 }
 
-void testBucketsort()
+void test()
 {
     test1();
     test2();
     test3();
+}
+
 }

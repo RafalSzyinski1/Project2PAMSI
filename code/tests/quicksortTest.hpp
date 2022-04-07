@@ -5,6 +5,9 @@
 #include "quicksort.hpp"
 #include "tests/sortTest.hpp"
 
+namespace Quicksort
+{
+
 // Simple test
 void test1()
 {
@@ -46,10 +49,12 @@ void test4()
     printf("TEST4 GOOD\n");
 }
 
-void testQuicksort()
+void test()
 {
     test1();
     test2();
     test3();
     test4();
+}
+
 }

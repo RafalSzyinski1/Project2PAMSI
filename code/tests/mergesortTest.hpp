@@ -6,6 +6,9 @@
 #include "mergesort.hpp"
 #include "tests/sortTest.hpp"
 
+namespace Mergesort
+{
+
 // Simple test
 void test1()
 {
@@ -47,10 +50,12 @@ void test4()
     printf("TEST4 GOOD\n");
 }
 
-void testMergesort()
+void test()
 {
     test1();
     test2();
     test3();
     test4();
+}
+
 }
