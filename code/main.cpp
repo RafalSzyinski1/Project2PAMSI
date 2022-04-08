@@ -1,7 +1,8 @@
-#include "tests/mergesortTest.hpp"
-#include "benchmark/quicksortBenchmark.hpp"
+#include "tests/heapsortTest.hpp"
+#include "benchmark/heapsortBenchmark.hpp"
 int main()
 {
-    Quicksort::bench();
+    Heapsort::test();
+    Heapsort::bench();
     return 0;
 }
