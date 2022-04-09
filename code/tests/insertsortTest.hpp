@@ -2,18 +2,18 @@
 #include <cassert>
 #include <cstdio>
 
-#include "heapsort.hpp"
+#include "insertsort.hpp"
 #include "tests/sortTest.hpp"
 #include "data.hpp"
 
-namespace Heapsort
+namespace Insertsort
 {
 
 // Simple test
 void test1()
 {
     int tab[] = {6, 5, 4, 3, 2, 1};
-    heapsort(tab, 6);
+    insertsort(tab, 6);
     assert(chcekIfSorted(tab, 6));
     printf("TEST1 GOOD\n");
 }
@@ -22,7 +22,7 @@ void test1()
 void test2()
 {
     int tab[] = {0, 0, 0, 0, 0, 0, -1};
-    heapsort(tab, 7);
+    insertsort(tab, 7);
     assert(chcekIfSorted(tab, 7));
     printf("TEST2 GOOD\n");
 }
@@ -33,7 +33,7 @@ void test3()
     int tab[10];
     for (int i = 0; i < 10; ++i)
         tab[i] = rand();
-    heapsort(tab, 10);
+    insertsort(tab, 10);
     assert(chcekIfSorted(tab, 10));
     printf("TEST3 GOOD\n");
 }
@@ -45,19 +45,18 @@ void test4()
     int tab[size];
     for (int i = 0; i < size; ++i)
         tab[i] = rand() - (RAND_MAX / 2);
-    heapsort(tab, size);
+    insertsort(tab, size);
     assert(chcekIfSorted(tab, size));
-    printf("TEST4 GOOD\n");
+    printf("TEST5 GOOD\n");
 }
 
 // Test
 void test5()
 {
     int tab[] = {6, 5, 4, 3, 2, 1};
-    heapsort(tab + 1, 5);
+    insertsort(tab + 1, 5);
     assert(chcekIfSorted(tab + 1, 5));
-    assert(tab[0] == 6);
-    printf("TEST5 GOOD\n");
+    printf("TEST4 GOOD\n");
 }
 
 void test()
@@ -65,8 +64,8 @@ void test()
     test1();
     test2();
     test3();
-    test4();
     test5();
+    test4();
 }
 
 }

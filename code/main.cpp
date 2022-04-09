@@ -1,8 +1,9 @@
-#include "tests/heapsortTest.hpp"
-#include "benchmark/heapsortBenchmark.hpp"
+#include "tests/insertsortTest.hpp"
+
 int main()
 {
-    Heapsort::test();
-    Heapsort::bench();
+    Insertsort::test();
+    // Heapsort::bench();
+    // Insertsort::test();
     return 0;
 }
