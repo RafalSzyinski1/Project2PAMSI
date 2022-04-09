@@ -21,7 +21,7 @@ struct Film
 
 Film* getData(int size)
 {
-    assert(size<=FILTRED_DATA_SIZE);
+    assert(size<=FILTRED_DATA_SIZE * 4);
     Film* films = new Film[size];
     FILE* file = fopen("data.csv", "r");
     assert(file);

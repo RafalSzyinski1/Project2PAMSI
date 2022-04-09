@@ -25,10 +25,18 @@ void bench2()
 
 void bench3()
 {
-    long long data_size = FILTRED_DATA_SIZE;
+    long long data_size = 500000;
     auto data = getData(data_size);
     long long time = benchmark([&](){heapsort(data, data_size);});
     printf("Benchmark 3: Data Size=%lld, Time=%lldms\n", data_size, time);
+}
+
+void bench4()
+{
+    long long data_size = 1000000;
+    auto data = getData(data_size);
+    long long time = benchmark([&](){heapsort(data, data_size);});
+    printf("Benchmark 4: Data Size=%lld, Time=%lldms\n", data_size, time);
 }
 
 void bench()
@@ -36,6 +44,7 @@ void bench()
     bench1();
     bench2();
     bench3();
+    bench4();
 }
 
 }
